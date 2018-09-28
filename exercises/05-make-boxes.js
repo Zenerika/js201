@@ -7,6 +7,21 @@
 // *****
 // *****
 // *****
+function makeSquare (num) {
+    if (num === 0) {
+    }
+    var topLine = '*'
+    for (var i = 1; i < num; i++) {
+    topLine = topLine + '*'    
+    } 
+    for (var i = 1; i < num; i++) {
+        topLine = topLine + '*'    
+        } 
+    console.log(topLine)
+    
+    
+
+} makeSquare (3) 
 
 
 

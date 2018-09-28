@@ -5,13 +5,31 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
+function numberJoinerWhile (startNum, endNum) {
+    var i = startNum
+    var myArr = []
+    while (i <= endNum) {
+        myArr.push(i)
+        i++
+     }
+    return myArr.join('_')
+} 
 
+console.log(numberJoinerWhile(12,14))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
+function numberJoinerFor (startNum, endNum) {
+    var i = startNum
+    var myArr = []
+    for (var i=startNum; i<=endNum; i++) {
+        myArr.push(i)
+     }
+    return myArr.join('_')
+} 
 
-
+console.log(numberJoinerFor(12,14))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFancy" which does the same thing as "numberJoinerWhile",
@@ -21,3 +39,20 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+function numberJoinerFancy (startNum, endNum, opTional) {
+    var i = startNum
+    var myArr = []
+    if (opTional === undefined) {
+        opTional = '_'
+    }
+    while (i <= endNum) {
+        myArr.push(i)
+        i++
+     }
+
+
+    return myArr.join(opTional)
+    
+} 
+
+console.log(numberJoinerFancy(12,14, "~"))
